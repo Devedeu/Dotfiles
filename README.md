@@ -1,4 +1,4 @@
-A newbie's hyprland rice
+A newbie's hyprland rice.
 
 https://github.com/user-attachments/assets/2568b17e-6e7f-46ad-9bf9-2db00362f7fd
 
