@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#this is not mine, I "borrowed" from somebody else
+#set wallpaper and directory variable
+        dir="${HOME}/wallpapers"
+	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.gif' | shuf -n1)"
+
+# Picks background wallpaper
+swww img $BG -t grow --transition-pos top --transition-duration 0.5 --transition-fps 60
+
+
+
+# generate color scheme
+wal -i $BG -q
+
+# reload configs
+#killing the terminal is for tide because it doesn't fully update when changing the colors, I have no other idea how to do it except to restart the terminal. If you don't use tide for your prompt, this is not needed
+if
+	pgrep kitty ; 
+
+then    pkill kitty
+	kitty
+
+
+fi
+
+if
+	pgrep waybar;
+
+then    killall waybar
+	waybar
+
+fi
+
+
+exec /home/portocala2/.config/mako/update-theme.sh

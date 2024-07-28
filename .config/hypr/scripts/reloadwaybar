@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if 
+   pgrep waybar
+
+then
+   killall waybar
+   waybar
+
+fi
