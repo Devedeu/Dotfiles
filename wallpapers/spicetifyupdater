@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#can be added into the wallpaper changer script
+
+#spicetify color.ini reload without closing/restarting spotify
+rm ~/.config/spicetify/Themes/def/color.ini && cp ~/.cache/wal/color.ini ~/.config/spicetify/Themes/def/color.ini
+spicetify watch -s
+
