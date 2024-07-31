@@ -1,0 +1,9 @@
+file=~/.config/vesktop/themes/colors-discord.css
+
+if [ -e "$file" ]; then
+ rm $file && cp ~/.cache/wal/colors-discord.css $file
+else
+   cp ~/.cache/wal/colors-discord.css $file
+
+fi
+
